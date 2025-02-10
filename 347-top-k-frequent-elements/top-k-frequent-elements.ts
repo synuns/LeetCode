@@ -12,7 +12,7 @@ function getFrequentNumbers(nums: number[]) {
     return freqNumObj;
 }
 
-function getMostNumber(numObj: Record<string, number>, length: number) {
+function getMostNumber(numObj: Record<number, number>, length: number) {
     const sortedNumObj = Object.entries(numObj).sort(([, a], [, b]) => b - a);
     const mostNumArr = []
     
