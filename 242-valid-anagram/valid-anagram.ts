@@ -11,9 +11,5 @@ function isAnagram(s: string, t: string): boolean {
         dictionary[char]--;
     }
 
-    Object.keys(dictionary).forEach((char) => {
-        if(dictionary[char] !== 0) return false;
-    })
-
-    return true
+    return Object.values(dictionary).every(count => count === 0);
 };
